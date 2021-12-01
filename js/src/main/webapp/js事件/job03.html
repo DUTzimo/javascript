@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件句柄绑定</title>
+	<script>
+		function run1(){
+			alert("run11111");
+		}
+		function run2(str){
+			alert(str);
+		}
+		function run3(obj){
+			alert(obj.value);
+		}
+		function run11(){
+			alert("11111");
+		}
+		function run12(){
+			alert("22222");
+		}
+		function run13(){
+			alert("33333");
+		}
+	</script>
+</head>
+<body>
+	<!-- 绑定一个无参函数 -->
+	<input value="1" onclick="run1()"><br/>
+	
+	<!-- 绑定一个有参函数，参数为字符串 -->
+	<input value="22" onclick="run2('run22222')"><br/>
+
+	<!-- 绑定一个有参函数，参数为元素对象  -->
+	<input value="333" onclick="run3(this)"><br/>
+	
+	<!-- 绑定多个函数  -->
+	<input value="4444" onclick="run11(),run12(),run13()"><br/>
+	
+</body>
+</html>

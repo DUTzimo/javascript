@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>获取元素节点</title>
+</head>
+<body>
+	姓名：<input id="t1"><br/><br/>
+	爱好：<input type="checkbox" name="hobby" value="backetball">篮球
+	 	<input type="checkbox" name="hobby" value="football">足球
+		<input type="checkbox" name="hobby" value="volleyball">排球
+		<br/><br/>
+	<ul>
+		<li>java</li>
+		<li>c++</li>
+		<li>python</li>
+		<li>go</li>
+		<li>javascript</li>
+	</ul><br/><br/>
+	
+	性别：<input type="radio" name="sex" value="man" class="xin">男
+		<input type="radio" name="sex" value="weman" class="xin">女
+	
+		
+	<script>
+		//通过ID获取元素  (Element!)
+		var t1=document.getElementById("t1");
+		alert("t1");
+		alert(document.getElementById("t2")); //返回null
+		
+		//通过name获取元素  (Element【s】!)
+		var arr1=document.getElementsByName("hobby");
+		alert(arr1.length);
+		alert(document.getElementsByName("hobby2").length);
+		
+		//通过标签名获取元素  (Element【s】!)
+		var arr2=document.getElementsByTagName("li");
+		alert(arr2.length);
+		
+		//通过类名获取元素  (Element【s】!)
+		var arr3=document.getElementsByClassName("xin");
+		alert(arr3.length);
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>常见的js事件</title>
+	<script>
+		function run1(){
+			alert("点击click");
+		}
+		function run2(){
+			alert("获得焦点focus");
+		}
+		function run3(){
+			alert("失去焦点focus");
+		}
+		function run4(){
+			alert("域内容改变");
+		}
+		function run5(){
+			alert("加载完毕");
+		}
+		function run6(){
+			alert("表达提交");
+			//在这可以进行表单校验
+//			return true;
+			return false;
+		}
+		function run7(){
+			alert("键盘按键弹起");
+		}
+		function run8(){
+			alert("鼠标移入");
+		}
+		function run9(){
+			alert("鼠标移出");
+		}
+	</script>
+</head>
+
+	<!-- 加载完毕事件 -->
+<body onload="run5()">
+	
+	<!-- 点击事件 -->
+	点击事件：<input onclick="run1()"><br/><br/><br/>
+	
+	<!-- 焦点事件 -->
+	获得焦点事件：<input onfocus="run2()"><br/><br/><br/>
+	失去焦点事件：<input onblur="run3()"><br/><br/><br/>
+	
+	<!-- 域内容事件 -->	
+	<select onchange="run4( )" >
+		<option value="edg">EDG！</option>
+		<option value="fpx">FPX！</option>
+		<option value="ig">IG！</option>
+	</select><br/><br/><br/>
+	
+	<!-- 表单提交事件 -->
+		<!-- 
+			用来校验表单
+			true： 允许表单提交
+			false：阻止表单提交
+		 -->
+	<form onsubmit="return run6()">
+		2021夺冠战队：<input name="EDG" value="edg"><br/>
+		2020夺冠战队：<input name="DWG" value="dwg"><br/>
+		2019夺冠战队：<input name="FPX" value="fpx"><br/>
+		2018夺冠战队：<input name="IG" value="ig"><br/>
+		你最喜欢的lpl战队：<input name="lpl"><br/>
+		 <input type="submit" value="提交"><br/><br/><br/>
+	</form>
+
+	<!-- 按键弹起事件 -->
+		按键弹起事件：<input onkeyup="run7()"><br/><br/><br/>
+	
+	<!-- 鼠标移动事件 -->
+	鼠标移入事件：<input onmouseover="run8()"><br/><br/><br/>
+	鼠标移出事件：<input onmouseout="run9()"><br/><br/><br/>
+
+</body>
+</html>

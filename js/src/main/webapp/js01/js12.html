@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js数组的部分函数</title>
+	<script>
+		//join(string) 用分隔符拼接数组
+		var arr1=["a",'b','c','d'];
+		var result1=arr1.join("");//默认用，拼接
+	/* 	alert(result1);
+		alert(result1.length);//4，不改变原数组
+		
+		//reverse() 翻转数组
+		var arr2=arr1.reverse();
+		alert(arr2);
+		alert(arr1);// 会对原数组发生改变
+		 */
+		//pop() 删除并且返回数组最后一个元素
+		var temp1=arr1.pop();
+		alert(temp1);
+		alert(arr1);
+		
+		//push() 向数组的末尾追加一个或多个元素，返回数组新长度
+		var len1=arr1.push('e','f');
+		alert(len1);
+		alert(arr1);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

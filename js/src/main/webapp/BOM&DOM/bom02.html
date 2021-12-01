@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>循环定时器</title>
+</head>
+<body>
+	<script>
+		function run1(){
+			alert("EDG");
+		}
+		//每隔3秒执行一次,返回值为定时器ID
+		var id=setInterval("run1()",3000);
+		//关闭定时器
+		clearInterval(id);
+		
+		//页面等待2秒后，有且仅执行一次run2()
+		var iid;
+		function run2(){
+			alert("RNG");
+			clearInterval(iid);
+		}
+		iid=setInterval("run2()",2000);
+
+		
+		
+		
+	</script>
+</body>
+</html>

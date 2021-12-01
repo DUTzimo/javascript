@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>自定义函数</title>
+	<script>
+		/* public static int getSum(int a,int b){
+			return a+b;
+		} */
+		function getSum(a,b){
+			return a+b;
+		}
+		var result1=getSum(1,2);
+		alert(result1);
+		
+		//js没有重载只有覆盖，且  result1  的也是调用下面覆盖后的函数
+		function getSum(a,b,c){
+			return (a+'+'+b+'+'+c);
+		}
+		var result2=getSum(1,2,3);
+		alert(result2);
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>自定义对象（类）</title>
+	<script>
+		//定义声明一个Person对象
+		 //1.再对象声明定义阶段，定义属性
+		 //2.创建对象后，使用对象时候 动态 定义属性，
+		 //	 同时原来的类属性也随之发生 永久 的改变
+		function Person(name,age){
+			 this.name=name;
+			 this.age=age;
+		 }
+	
+		 var p=new Person("edg",10);
+		 alert(p.name);
+		 alert(p.age);
+		 p.name="FPX";
+		 p.age=3;
+		 p.win=2019;
+		 alert(p.name);
+		 alert(p.age);
+		 alert(p.win);
+		 var p0=new Person("ig",10);
+		 alert(p0.name);
+		 alert(p0.age);
+		 alert(p0.win);
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

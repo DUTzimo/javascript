@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>正则：普通方式</title>
+	<script>
+		//普通方式是部分匹配
+		var reg=/\s+/;
+		var flag1=reg.test("a a");  //true
+		var flag2=reg.test("aaa");  //false
+		alert(flag1);
+		alert(flag2); 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

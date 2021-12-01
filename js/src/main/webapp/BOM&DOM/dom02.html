@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>元素对象属性</title>
+	<style>
+	.sty2{
+		color:red;
+	}
+	.sty1{
+		color:blue;
+	}
+	</style> 
+</head>
+<body>
+	姓名：<input id="t1" value="EDG"><br/><br/>
+	
+	恭喜<span id="lpl" class="sty1">EDG！</span><br/><br/>
+	lpl<span id="win" class="sty1">共三个冠军！</span><br/><br/>
+	
+	爱好：<input id="love" type="checkbox" name="hobby" value="backetball">篮球
+	 	<input type="checkbox" name="hobby" value="football">足球
+		<input type="checkbox" name="hobby" value="volleyball">排球
+		<br/><br/>
+	<script>
+		//value
+		var t1=document.getElementById("t1");
+		alert(t1.value);
+		t1.value="7777777";
+		
+		//classname
+		var lpl=document.getElementById("lpl");
+		alert(lpl.className);
+		lpl.className="sty2";
+	
+		//checked
+		var love=document.getElementById("love");
+		alert("篮球"+love.checked);
+		love.checked=true;
+	
+		//innerHTML
+		var win=document.getElementById("win");
+		alert("lpl"+win.innerHTML);
+		win.innerHTML="中IG是英雄,FPX是联盟, "
+		win.innerHTML+=" 而EDG是青春！"
+		
+		
+	</script>
+	
+</body>
+</html>

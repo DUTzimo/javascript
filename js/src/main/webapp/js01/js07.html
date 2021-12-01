@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>正则：直接量方式</title>
+	<script>
+		//直接量方式必须所有字符符合正则，即全部匹配
+		var reg1=/^\s*$/;//0到多个空格，/s是空格
+		var flag11=reg1.test("    ")   //true
+		var flag12=reg1.test("a  ")   //false
+		alert(flag11);
+		alert(flag12);
+		
+		var reg2=/^\s+$/;//1到多个空格，/s是空格
+		var flag21=reg2.test("")   //false
+		var flag22=reg2.test("   ")   //true
+		alert(flag21);
+		alert(flag22);
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

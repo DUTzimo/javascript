@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件DOM绑定</title>
+	<script>
+		function run1(str){
+			alert(str);
+		}
+		function run2(){
+			alert("加载完毕2");
+		}
+		
+		//DOM绑定方式  一次只能绑定一个函数
+// 		window.onload=run1("加载完毕1");
+		
+		//DOM绑定方式  一次可以绑定多个函数
+//		window.onload=function(){
+//			run1("加载完毕1");
+//			run2();
+//		}
+		
+		window.onload=function(){
+			var t1=document.getElementById("t1");
+			t1.onclick=function(){
+				run1(t1.value);
+				run2();
+			}
+		}
+		 
+	</script>
+</head>
+<body>
+	2021冠军：<input id="t1" value="EDG">
+</body>
+</html>
